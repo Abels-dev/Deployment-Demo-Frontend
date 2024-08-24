@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Edit a blog</title>
+</head>
+<body>
+<div class="p-5">
+  <a href="home.html" class="text-blue-400"> < Back </a>
+</div>
+<div class="px-20">
+  <div class="wrapper">
+    <h1 class="text-4xl font-bold">Create a Blog</h1>
+    <button id="toggle-theme">Toggle Light Mode</button>
+  </div>
+  <div class="container mx-auto">
+    <form id="blog-form" class="w-10/12">
+      <div class="my-2 flex flex-col">
+        <label for="title" class="pr-3">Title</label>
+        <input  name="title" id="title" placeholder="Enter title here..."
+               class="rounded-lg p-2 max-w-[300px] shadow-md">
+      </div>
+      <div class="my-2 flex flex-col">
+        <label for="author" class="pr-3">Author</label>
+        <input  name="author" id="author" placeholder="Enter new Author here..."
+               class="rounded-lg p-2 max-w-[300px] shadow-md">
+      </div>
+      <div class="my-2 flex flex-col">
+        <label for="tags" class="pr-3">Tags</label>
+        <input  name="tags" id="tags" placeholder="Enter new tags here (comma separated) ..."
+               class="rounded-lg p-2 max-w-[300px] shadow-md">
+      </div>
+      <div class="my-2 flex flex-col">
+        <label for="blog-content" class="pr-3">Content</label>
+        <textarea  name="content" id="blog-content" placeholder="Enter new Content here..."
+                  class="rounded-lg p-2 max-w-[300px] shadow-md"></textarea>
+      </div>
+      <button class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded" type="submit">Submit</button>
+      <button class="bg-gray-500 hover:bg-gray-700 font-bold py-2 px-4 m-5 rounded"><a href="home.html">Cancel</a></button>
+    </form>
+  </div>
+</div>
+<script src="editBlog.js"></script>
+</body>
+</html>
