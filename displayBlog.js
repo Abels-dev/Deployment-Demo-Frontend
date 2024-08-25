@@ -8,7 +8,7 @@ const id = getQueryParams();
 const findPost = async (id) => {
   try {
     const response = await fetch(
-      `https://deployment-demo-backend-aitk.onrender.com/api/posts/${id}`
+      `https://deployment-demo-backend-sj4g.onrender.com/api/posts/${id}`
     );
     const post = await response.json();
     if (post) {

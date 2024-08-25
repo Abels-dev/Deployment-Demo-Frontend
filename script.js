@@ -1,7 +1,7 @@
 (async () => {
   try {
     const response = await fetch(
-      "https://deployment-demo-backend-aitk.onrender.com/api/posts"
+      "https://deployment-demo-backend-sj4g.onrender.com/api/posts"
     );
     const data = await response.json();
     console.log(data);
@@ -46,7 +46,7 @@ const deleteBlog = async (id) => {
   if (answer === "Y" || answer === "y") {
     try {
       const response = await fetch(
-        `https://deployment-demo-backend-aitk.onrender.com/api/posts/${id}`,
+        `https://deployment-demo-backend-sj4g.onrender.com/api/posts/${id}`,
         {
           method: "DELETE",
         }

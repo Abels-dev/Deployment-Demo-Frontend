@@ -13,7 +13,7 @@ document
     }
     try {
       const response = await fetch(
-        "https://deployment-demo-backend-aitk.onrender.com/api/posts",
+        "https://deployment-demo-backend-sj4g.onrender.com/api/posts",
         {
           method: "POST",
           body: JSON.stringify(data),

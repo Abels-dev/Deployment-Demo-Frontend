@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await fetch(
-        "https://deployment-demo-backend-aitk.onrender.com/auth/login",
+        "https://deployment-demo-backend-sj4g.onrender.com/auth/login",
         {
           method: "POST",
           headers: {
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await fetch(
-        "https://deployment-demo-backend-aitk.onrender.com/auth/signup",
+        "https://deployment-demo-backend-sj4g.onrender.com/auth/signup",
         {
           method: "POST",
           headers: {
