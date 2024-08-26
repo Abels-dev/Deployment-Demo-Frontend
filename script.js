@@ -30,10 +30,13 @@
         tagNode.innerText = `${tag}`;
         tagNode.className = "tagNode";
       });
-      const buttons = document.createElement("div");
-      buttons.innerHTML = `<button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 my-5 rounded" onclick=deleteBlog(\`${post._id}\`)>Delete Blog</button>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-5 rounded"><a href="editBlog.html?id=${post._id}">Edit Blog</a> </button>`;
-      postElement.append(buttons);
+      const userInfo=JSON.parse(localStorage.getItem("token")) // get the token and the user id from localStorage
+       if(userInfo.id===post.author._id){ // only display the delete and edit ui for the user's own post only
+         const buttons = document.createElement("div");
+        buttons.innerHTML = `<button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 my-5 rounded" onclick=deleteBlog(\`${post._id}\`)>Delete Blog</button>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-5 rounded"><a href="editBlog.html?id=${post._id}">Edit Blog</a> </button>`;
+        postElement.append(buttons);
+      }
       content.appendChild(postElement);
     });
   } catch (e) {
