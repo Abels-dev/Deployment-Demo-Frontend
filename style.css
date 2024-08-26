@@ -70,3 +70,6 @@ body{
     text-align: start;
     color: #2980b9;
 }
+#blog-form input,#blog-form textarea{
+    color: #1e1e1e; 
+}
