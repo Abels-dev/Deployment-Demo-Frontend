@@ -48,10 +48,14 @@ const deleteBlog = async (id) => {
   const answer = prompt("Are you sure you want to delete this blog? Y or N");
   if (answer === "Y" || answer === "y") {
     try {
+      const userInfo=JSON.parse(localStorage.getItem("token"))
       const response = await fetch(
         `https://deployment-demo-backend-sj4g.onrender.com/api/posts/${id}`,
         {
           method: "DELETE",
+          headers: {
+            "authorization":userInfo.token  
+          },
         }
       );
       if (response.status === 204) {
