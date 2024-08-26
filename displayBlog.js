@@ -15,7 +15,7 @@ const findPost = async (id) => {
       document.getElementById("post-title").innerText = post.title;
       document.getElementById("post-content").innerText = post.content;
       document.getElementById("post-meta").innerText = `Author: ${
-        post.author
+        post.author.username
       } | Date: ${new Date(post.createdAt).toLocaleDateString()}`;
     }
   } catch (e) {
