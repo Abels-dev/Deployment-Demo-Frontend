@@ -36,8 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       const data = await response.json();
+      localStorage.setItem("token",JSON.stringify({token:data.token,id:data.id}))
       if (response.ok) {
-        window.location.href = "home.html";
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 1000);
         console.log("Token:", data.token);
       } else {
         alert(data.error);
