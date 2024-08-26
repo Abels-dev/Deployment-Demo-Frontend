@@ -12,6 +12,7 @@ document
       }
     }
     try {
+      const user=JSON.parse(localStorage.getItem("token"))
       const response = await fetch(
         "https://deployment-demo-backend-sj4g.onrender.com/api/posts",
         {
@@ -19,6 +20,7 @@ document
           body: JSON.stringify(data),
           headers: {
             "Content-type": "application/json; charset=UTF-8",
+            "authorization":user.token
           },
         }
       );
